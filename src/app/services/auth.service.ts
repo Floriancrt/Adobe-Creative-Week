@@ -62,7 +62,6 @@ export class AuthService {
     auth().signOut().then(function() {
  
       window.location.assign('https://accounts.google.com/logout');
-      window.location.reload(true);
     }).catch(function(error) {
 
     });
