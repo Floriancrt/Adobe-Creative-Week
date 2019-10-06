@@ -4,8 +4,60 @@ img {
   margin: auto;
 }
 
+.all-btn
+{
+  background-color: transparent;
+  border-color: rgb(81, 130, 179);
+  color: rgb(81, 130, 179);
+}
+
+.all-btn:hover
+{
+  background-color: rgb(81, 130, 179);
+  color: white;
+}
+
+
 button {
   margin: 10px;
 }
 
+.msg
+{
+display: inline-table;
+  align-items: center;
+  order: 2;
+  text-align: center;
+  border-bottom: 4px solid #204b6d;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1.3em;
+  animation-delay: 0ms;
+  animation-duration: 600ms;
+  background-color: rgb(32, 75, 109,1);
+}
 
+h1
+{
+  color: black;
+  margin: 10vh 0px;
+}
+
+h2
+{
+  color: black;
+}
+
+.tchat h3
+{
+  margin: 20px 0px 0px 0;
+}
+
+
+
+.button.is-small
+{
+  margin: 0px 4vh;
+}

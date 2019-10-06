@@ -79,19 +79,19 @@ export class ChatService {
     }
   }
 
-  async deleteMessage(chat, msg) {
+  async delete(chat){
     const { uid } = await this.auth.getUser();
 
     const ref = this.afs.collection('chats').doc(chat.id);
-    console.log(msg);
-    if (chat.uid === uid || msg.uid === uid) {
-      // Allowed to delete
-      delete msg.user;
+    if(chat.id === uid)
+    {
+      delete chat.id;
       return ref.update({
-        messages: firestore.FieldValue.arrayRemove(msg)
+        chat: firestore.FieldValue.arrayRemove(chat)
       });
     }
   }
+
 
   joinUsers(chat$: Observable<any>) {
     let chat;

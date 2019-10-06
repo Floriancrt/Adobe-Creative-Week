@@ -1,10 +1,7 @@
 <ng-container *ngIf="chat$ | async as chat">
   <ng-container *ngIf=" auth.user$ | async as user">
 
-    <div class="top">
-      <p><a class="button is-success is-outlined" routerLink="/">Back</a></p>
-    </div>
-
+  
 
     <div #chatBox class="chat">
 
@@ -12,10 +9,9 @@
       <div class="msg animated zoomInUp" *ngFor="let msg of chat.messages; trackBy: trackByCreated">
 
         <div class="user">
-          <img [src]="msg.user?.photoURL || 'assets/escape.png'" width="50px">
+          <img [src]="msg.user?.photoURL || 'assets/logo-spirale.png'" width="50px">
           <div><span class="tag is-dark">{{ msg.user?.displayName || msg.user?.uid }}</span></div>
 
-          <button *ngIf="chat.uid === user.uid || msg.uid === user.uid" class="button is-danger is-small" (click)="cs.deleteMessage(chat, msg)">Delete</button>
 
         </div>
 
@@ -31,10 +27,11 @@
 
     
 
-    <div class="form class">
+    <div class="form scrolling-navbar top-nav-collapse">
       <input class="input" [(ngModel)]="newMsg" maxlength="100" (keydown.enter)="submit(chat.id)">
-
-      <button (click)="submit(chat.id)" class="button is-info" [disabled]="!newMsg">Envoyer</button>
+      
+      <button (click)="submit(chat.id)" class="button all-btn is-medium" [disabled]="!newMsg">Envoyer</button>
+      <p><a class="button all-btn is-1 is-medium" routerLink="/">Retour</a></p>
     </div>
 
   </ng-container>

@@ -4,35 +4,35 @@
 
   <div *ngIf=" auth.user$ | async as user; else login">
       <div >
-          <h1>Bienvenue {{ user.displayName }} au Magic Adventure</h1>
+          <h1>Bienvenue {{ user.displayName }} à l'Almanach</h1>
           </div>
   
-    <hr>
 
-    <button class="button" routerLink="/chats/escapebreak">Rejoignez le tchat</button>
-    <button class="button is-info" (click)="cs.create()">Créer un nouveau tchat</button>
+          <div class="msg">
+    <button class="button all-btn is-medium" routerLink="/chats/Almanach">Rejoignez le tchat</button>
+    <button class="button all-btn is-medium" (click)="cs.create()">Créer un nouveau tchat</button>
 
-    <hr>
+ 
 
-    <h3>Mes Tchats</h3>
+    <h2>Mes Tchats</h2>
 
     <ul>
       <div *ngFor="let chat of userChats$ | async; let i = index">
-        <a [routerLink]="'chats/' + chat.id"> Chat {{i+1}} - {{ chat.messages.length }} Messages </a>
+        <button [routerLink]="'chats/' + chat.id" class="button all-btn is-outlined is-medium"> Chat {{i+1}} - {{ chat.messages.length }} Messages </button>
       </div>
     </ul>
-    <hr>
-    <button class="button is-small" (click)="auth.googleSignOut()">Se déconnecter</button>
+
+    <button class="button all-btn is-outlined is-medium" (click)="auth.googleSignOut()">Se déconnecter</button>
   </div>
 
- 
+ </div>
 
 </div> 
 <ng-template #login>
 
-       
-  <h1>Bienvenue au Magic Adventure</h1>
-  <hr>
-    <button class="button" (click)="auth.googleSignIn()">Se connecter avec Google</button>
-
+  
+  <h1>Bienvenue au Almanach</h1>
+  <div class="msg">
+    <button class="button all-btn is-outlined is-medium" (click)="auth.googleSignIn()">Se connecter avec Google</button>
+  </div>
   </ng-template>

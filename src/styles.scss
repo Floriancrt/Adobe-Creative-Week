@@ -1,7 +1,49 @@
+@font-face
+{
+    font-family: 'Spinnenkop DEMO Courant';
+    src: url('./assets/spinnenkop/Spinnenkop\ DEMO.otf');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+html,
+body,
+button
+{
+  font-family: 'Spinnenkop DEMO Courant';
+}
+
+p
+{
+  font-size: 4vh;
+}
+
+input{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body
+{
+  color: black;
+}
+
+html{
+  height: 100vh;
+	background: url("assets/almanach-logo.jpg") center no-repeat;
+	background-size: cover;
+ 
+ 
+  
+}
+
+
 .content {
     display: flex;
     padding: 5vh;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: black;
   }
+
+  .button.is-danger.is-outlined{$button-margin-horizontal: 1em;}
