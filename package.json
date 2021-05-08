@@ -23,7 +23,7 @@
     "core-js": "^3.2.1",
     "firebase": "^7.0.0",
     "fstream": "^1.0.12",
-    "handlebars": "^4.4.0",
+    "handlebars": "^4.7.7",
     "js-yaml": "^3.13.1",
     "lodash.mergewith": "^4.6.2",
     "rxjs": "^6.5.3",
