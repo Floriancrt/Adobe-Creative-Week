@@ -19,7 +19,7 @@
     "mixin-deep": "^2.0.1"
   },
   "devDependencies": {
-    "set-value": "^3.0.1",
+    "set-value": "^4.0.1",
     "tslint": "~5.8.0",
     "typescript": "~2.8.3"
   },
